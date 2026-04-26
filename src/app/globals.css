@@ -1,0 +1,249 @@
+:root {
+  --bg: #f4f2ec;
+  --ink: #1f2329;
+  --ink-muted: #59606b;
+  --line: #cfc5b9;
+  --panel: #f9f6f1;
+  --accent: #2f6f63;
+  --accent-soft: #d7e7e2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 0% 0%, #ece7dd 0%, var(--bg) 48%, #f6f3ee 100%);
+  color: var(--ink);
+  font-family:
+    "IBM Plex Sans",
+    "Avenir Next",
+    "Segoe UI",
+    sans-serif;
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  min-height: 100vh;
+  padding: 2.25rem 1.25rem 2.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.eyebrow {
+  color: var(--ink-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.headline {
+  margin: 0.5rem 0 0.8rem;
+  font-family:
+    "Fraunces",
+    "Iowan Old Style",
+    serif;
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.subline {
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.launcher-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.75rem;
+}
+
+.launch-action {
+  background: linear-gradient(178deg, var(--panel) 0%, #f3ede4 100%);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: block;
+  min-height: 150px;
+  padding: 1.15rem 1.2rem;
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.launch-action:hover {
+  border-color: #9f9384;
+  transform: translateY(-1px);
+}
+
+.launch-action-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.launch-action-copy {
+  color: var(--ink-muted);
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: 0.65rem;
+}
+
+.workspace-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 1.4rem;
+}
+
+.panel {
+  background: linear-gradient(180deg, #f9f6f1 0%, #f3eee6 100%);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem 1rem 1.05rem;
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.panel-copy {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-top: 0.55rem;
+}
+
+.code-preview {
+  background: #182126;
+  border-radius: 6px;
+  color: #dde9eb;
+  margin-top: 0.9rem;
+  overflow: auto;
+  padding: 0.95rem;
+}
+
+.code-preview code {
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Menlo,
+    monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.95rem;
+}
+
+.ui-btn {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.56rem 0.75rem;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.ui-btn:hover {
+  border-color: #a59683;
+}
+
+.ui-btn-primary {
+  background: var(--accent);
+  border-color: #2a6257;
+  color: #f3f7f6;
+}
+
+.ui-btn-primary:hover {
+  background: #285f54;
+  border-color: #234f45;
+}
+
+.ui-btn-subtle {
+  background: var(--accent-soft);
+}
+
+.run-list {
+  display: grid;
+  gap: 0.58rem;
+  margin-top: 0.8rem;
+}
+
+.run-row {
+  border-bottom: 1px solid #d8cec1;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.run-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.run-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.run-meta {
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+}
+
+.status-pill {
+  align-items: center;
+  border: 1px solid #b6d4cb;
+  border-radius: 999px;
+  color: #1f5a4f;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  text-transform: uppercase;
+}
+
+.status-pill-warning {
+  border-color: #e1c89e;
+  color: #7c4f17;
+}
+
+@media (max-width: 860px) {
+  .launcher-grid,
+  .workspace-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shell {
+    padding-top: 1.6rem;
+  }
+}
